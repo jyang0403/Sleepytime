@@ -23,7 +23,7 @@ const colors = [
         let hh = document.getElementById("hh").value;
         let mm = document.getElementById("mm").value;
         let ampm = document.getElementById("ampm").value;
-        hh = ampm === "PM" ? hh + 12 : hh;
+        hh = ampm === "PM" ? Number.parseInt(hh) + 12 : hh;
         let now = new Date();
         // allow 14 minutes to fall sleep!
         now.setHours(hh);
